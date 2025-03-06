@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4 Pro BTP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<!-- Nous allons séparer notre site à l'aide de la propriété grid que l'on va applique à notre style CSS afin de mieux struturer notre site -->
+
+
+<body>
+
+<!-- Dans le header création de la classe container qui va contenir 3 zones dont une zone sera diviser en 3 (2 colonnes et une ligne)-->
+    <header class="container">
+        <div class="zone1">
+            <p>MON COMPTE <i class="fa-solid fa-lock fa-shake"></i></p>  <!-- cette icon contient une aniamtion qui permet de faire bouger le cadenas-->
+        </div>
+        <div class="zone2">
+            <p><i class="fa-solid fa-triangle-exclamation"></i>Derniers jours pour votre DNAS !</p>
+        </div>
+        <div class="zone3">
+            <div class="zone4">
+                <a href=""><i class="fa-regular fa-envelope"></i>  Messagerie (2)</a>
+            </div>
+            <div class="zone5">
+                <p class="border">Déconnexion <i class="fa-solid fa-x"></i></p>
+            </div>
+            <div class="zone6">
+                <p>Entreprise XXXXXXXXX | N° Siret 000000000</p>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- Dans la nav on crée une classe nav qui va contenir une ligne de 7 colonnes -->
+
+    <nav class="nav">
+        <div class="item1">
+            <i class="fa-solid fa-house fa-lg"></i>
+        </div>
+        <div class="item2">
+            <p>MES INFOS</p>
+        </div>
+        <div class="item3">
+            <p>MES AUTORISATIONS D'ACCÉS</p>
+        </div>
+        <div class="item4">
+            <p>MES SALARIÉS</p>
+        </div>
+        <div class="item5">
+            <p>MES COTISATIONS</p>
+        </div>
+        <div class="item6">
+            <p>MES CONTRATS</p>
+        </div>
+        <div class="item7">
+            <p>MES OPÉRATIONS</p>
+        </div>
+        
+    </nav>
+
+ <!-- Dans la section ou main, on crée 2 sections qui vont contenir, pour la section1, une ligne de 2 colonnes. Pour la section2, 
+  2 lignes et 2 colonnes (donc 4 parties que l'on appelle card1, card2, card3 et card4) -->
+    <section class="section1">
+        <div class="info1">
+            <h3>Bienvenue Entreprise XXXXXXXXXXX</h3>
+        </div>
+        <div class="info2">
+            <p>Dernière connexion : le 10/03/2014 à 14:08</p>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="card1">
+            <ul>
+                <li><i class="fa-solid fa-thumbtack"></i> <strong>Cordonnées</strong></li>
+                <br>
+                <li><strong>n° SIRET</strong>: 000000000000000</li>
+                <br>
+                <li><i class="fa-solid fa-house-user"></i><strong>Adresse</strong>  : 298 boulevard Voltaire
+                75002 PARIS</li>
+                <br>
+                <li><i class="fa-solid fa-phone"></i> <strong>Téléphone</strong> : 02 02 02 02 02</li>
+                <br>
+                <li><i class="fa-regular fa-envelope"></i><strong>Adresse mail</strong>: xxxxxxxx.paris@gmail.com</li>
+            </ul>
+        </div>
+
+        <!-- Pour cette classe card2, nous allons créer un autre grid contenant 2 lignes. La première ligne va contenir, 
+         une autre grid (nested-grid ici nested-card1 et nested-card2) de 2 colonnes 
+         et la deuxième ligne va contenir 2 colonnes (card-card2 et card-card3) -->
+        <div class="card2">
+
+            <div class="card-card1">
+                <div class="nested-card1"><p><i class="fa-solid fa-triangle-exclamation fa-2xl"></i> <br><br>Urgent</p></div>
+                <div class="nested-card2"><p class="text">Il ne vous reste que 3 jours pour remplir la déclaration nominative annuelle des salaires (DNAS). Pour faire votre décaration, <a href="cliquez ici">cliquez ici.</a></p></div>
+            </div>
+               
+            <div class="card-card2">
+                <p class="aligne">MESSAGERIE</p>
+                <img src="notification.png" alt="notif" class="notif" draggable="false">
+                <a href="message" class="message">Vous avez 2 messages non-lus</a>
+
+            </div>
+            <!-- L'utilisation de liste non-ordonnée me permet de mieux struturer le contenu du site -->
+            <div class="card-card3">
+                <p class="pro">Contact PRO BTP</p>
+                <ul>
+                   <li><i class="fa-regular fa-user"></i>  Votre conseiller : JEAN DUPONT</li>
+                    <br>
+                   <li><i class="fa-solid fa-phone"></i> 04 04 04 04 04</li>
+                   <br>
+                   <li><i class="fa-regular fa-envelope"></i> <a href="">Envoyer un e-mail à mon conseiller</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- On va créer un tableau de 7 lignes et 5 colonnes -->
+        <div class="card3">
+            <h3> <i class="fa-regular fa-flag"></i> Dernières opérations</h3>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Objet</th>
+                    <th>Numéro d'opération</th>
+                    <th>Auteur</th>
+                    <th>Etat</th>
+                </tr>
+                <tr>
+                    <td>08/03/2014</td>
+                    <td>Mise à jour</td>
+                    <td>17</td>
+                    <td>Profil 2</td>
+                    <td>Brouillon <i class="fa-solid fa-gear"></i></td>
+                </tr>
+                <tr>
+                   <td>28/02/2014</td>
+                   <td>Affiliation</td>
+                   <td>16</td>
+                   <td>Profil 1</td>
+                   <td>Brouillon <i class="fa-solid fa-gear"></i></td>
+                </tr>
+                <tr>
+                   <td>27/02/2014</td>
+                   <td>Mise à jour</td>
+                   <td>15</td>
+                   <td>ADMIN</td>
+                   <td>Validé <i class="fa-solid fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>25/02/2014</td>
+                    <td>Mise à jour</td>
+                    <td>14</td>
+                    <td>Profil 1</td>
+                    <td>Validé <i class="fa-solid fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>10/02/2014</td>
+                    <td>DNAS</td>
+                    <td>13</td>
+                    <td>ADMIN</td>
+                    <td>Validé <i class="fa-solid fa-check"></i></td>
+                </tr>
+                <tr>
+                    <td>23/01/2014</td>
+                    <td>Arrêt de travail</td>
+                    <td>12</td>
+                    <td>Profil 2</td>
+                    <td>Validé <i class="fa-solid fa-check"></i></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- L'utilisation de liste non-ordonnée me permet de mieux struturer le contenu du site -->
+        <div class="card4">
+            <h3><i class="fa-solid fa-bolt-lightning"></i> Important</h3>
+            <ul>
+                <li><i class="fa-solid fa-play"></i> <strong>Nouveau </strong> : paiement des cotisations par chèque ou par prélèvement à l'échéance, c'est vous qui choisissez !</li>
+                <br>
+                <li><i class="fa-solid fa-play"></i> <strong>Arrêt de tavail</strong> > 90 jours : <a href="">ce qui change au 1er janvier 20214</a></li>
+                <br>
+                <li><i class="fa-solid fa-play"></i> <strong>Exonérations sociales et fiscales</strong> : <a href="">conformité des contrats prévoyance/frais de santé</a></li>
+                <br>
+                <li><i class="fa-solid fa-play"></i> <a href="HTML-RegistrationForm.html"><strong>Inscrivez-vous</strong></a> au télépaiement</li>
+            </ul>
+        </div>
+    </section>
+
+    
+
+
+
+
+    
+</body>
+</html>

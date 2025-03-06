@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="stylesheet">
+    <title>Formulaire d'inscription</title>
+
+</head>
+<body>
+
+    <form method="POST">
+        <h1>Formulaire d'inscription</h1>
+
+        <fieldset><legend>Identité</legend>
+            
+            <label for="id-lastname">Nom *</label>
+            <input type="text" name="lastname" id="id-lastname" placeholder="Entrez votre nom" required>
+
+            <label for="id-firstname">Prénom *</label>
+            <input type="text" name="firstname" id="id-firstname" placeholder="Entrez votre prénom" required>
+
+            <label for="id-birthday">Date de naissance*</label>
+            <input type="date" name="birthday" id="id-birthday" required>
+
+        </fieldset>
+
+        <fieldset><legend>Genre</legend>
+                <ul>
+                    <li>
+                        <input type="radio" name="genre" id="idHomme" value="homme" checked>
+                        <label for="idHomme">Homme</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="genre" id="Femme" value="femme">
+                        <label for="idFemme">Femme</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="genre" id="idAutre" value="autre">
+                        <label for="idAutre">Autre</label>
+                    </li>
+                </ul>
+
+        </fieldset>
+
+        <fieldset><legend>Adresse</legend>
+
+            <label for="id-adress">Numéro et nom de rue *</label>
+            <input type="text" name="adress" id="id-adress" placeholder="Exemple : 59 avenue de Toulouse" required>
+
+            <label for="Zipcode">Code postal *</label>
+            <input type="text" name="Zipcode" id="Zipcode" placeholder="Exemple : 34000" required>
+
+            <label for="idCity">Ville *</label>
+            <input list="idCityList" name="city-choise" id="idCity" placeholder="Exemple : Montpellier" required>
+            
+            <datalist id="idCityList">
+                <option value="Baillargues"></option>
+                <option value="Castelnau-le-Lez"></option>
+                <option value="Fabrègues"></option>
+                <option value="Grabels"></option>
+                <option value="Juvignac"></option>
+                <option value="Lattes"></option>
+                <option value="Montpellier"></option>
+                <option value="Pérols"></option>
+                <option value="Restinclières"></option>
+                <option value="Sussargues"></option>
+                <option value="Villeneuve-lès-Maguelone"></option>
+            </datalist>
+
+            <label for="addional-adress">Complément d'adresse</label>
+            <input type="text" name="adress" id="addional-adress" placeholder="Résidance, bâtiment, escalier, appartement, ect...">
+
+        </fieldset>
+
+        <fieldset><legend>Contact</legend>
+
+            <label for="idEmail">E-mail *</label>
+            <input type="email" name="email" id="idEmail" pattern=".@example\.com" placeholder="Entrez votre e-mail" size="30" required>
+
+            <label for="telNo">Téléphone/Mobile</label>
+            <input type="tel" id="telNo" name="telNo"  placeholder="Entrez votre numéro de téléphone/mobile">
+
+        </fieldset>
+
+        <fieldset><legend>Info Paiement</legend>
+
+            <label for="cardNumberInput">Numéro de carte bancaire</label>
+            <input type="text" id="cardNumberInput" required>
+
+            <label for="card-name-input">Nom sur la carte</label>
+            <input type="text" id="card-name-input" required>
+            
+            <div class="card">
+                <label for="card-expiration">Date d'expiration</label>
+                <input type="number" id="card-expiration" min="1" max="12" placeholder="MM" required>
+                <input type="number" id="card-expiration" placeholder="YYYY" required>
+
+                <label for="card-csv">CSV</label>
+                <input type="text" id="card-csv" placeholder="123">
+            </div>
+            
+            <input type="submit" name="payer" value="Payer"/>
+
+
+        </fieldset>
+
+        <input type="submit" value="S'inscrire"> 
+
+        <p>&#9888;&#65039; Les champs suivis d'un * sont obligatoires.</p>
+    
+    </form> 
+</body>
+</html>

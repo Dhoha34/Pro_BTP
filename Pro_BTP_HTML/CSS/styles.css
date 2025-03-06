@@ -1,0 +1,359 @@
+
+/* Me permet de sélectionner tous les éléments */
+* {
+    box-sizing: border-box;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+
+/* Correspond au style de mon header, on va utliser un display grid pour séparer mon header en 3 zones */
+.container {
+    display: grid;
+    height: 10vh;
+    margin-right: 2vh;
+    grid-template-columns: 2fr 3fr 4fr;
+    grid-template-areas: "zone1 zone2 zone3 ";
+   
+}
+
+/* Style pour les 3 zones */
+.zone1 {
+    grid-area: zone1;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zone2 {
+    grid-area: zone2;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* On utilise un display grid pour séparer ma 3ème zone en lui donnant 3 enfants (zone4, zone5 et zone6) */
+.zone3 {
+    grid-area: zone3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas: "zone4 zone5"
+                         "zone6 zone6";
+  
+
+}
+/* Style pour les 3 enfants */
+.zone4 {
+    grid-area: zone4;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 10px;
+}
+
+.zone5 {
+    grid-area: zone5;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+.zone6 {
+    grid-area: zone6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;  
+}
+
+/* Correspond à la bordure qui se trouve dans la zone 5, cela me permet d'y mettre une bordure et une ombre */
+.border {
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px black;
+
+}
+
+/* Style de ma navbar on utilise également un display grid pour séparer mes colonnes en class item */
+.nav {
+
+    box-shadow: 5px 5px 5px black;
+    margin-right: 2vh;
+    height: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr 3fr 3fr 4fr 3fr;
+    grid-template-areas: "item1 item2 item3 item4 item5 item6 item7";
+    
+}
+/* Style pour mes 7 items */
+.item1 {
+    grid-area: item1;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid black;
+    background-color: lightblue;
+}
+
+.item2 {
+    grid-area: item2;
+    border: 1px solid black;
+    font-size: 10px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.item3 {
+    grid-area: item3;
+    border: 1px solid black;
+    font-size: 10px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.item4 {
+    grid-area: item4;
+    border: 1px solid black;
+    font-size: 10px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.item5 {
+    grid-area: item5;
+    border: 1px solid black;
+    font-size: 10px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.item6 {
+    grid-area: item6;
+    border: 1px solid black;
+    font-size: 10px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.item7 {
+    grid-area: item7;
+    border: 1px solid black;
+    font-size: 10px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* On sépare notre main en 2 sections et on utilise également un display grid */
+
+.section1 {
+   display: grid;
+   height: 10vh;
+   margin-right: 2vh;
+   margin-top: 2vh;
+   grid-template-columns: 2fr 2fr;
+   grid-template-areas: "info1 info2";
+   gap:10px;
+
+}
+
+.info1 {
+    grid-area: info1;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+}
+
+.info2 {
+    grid-area: info2;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    margin: 4vh;
+    font-style: italic;
+   
+}
+
+/* La section 2 est composée de 4 grid que l'on va nommer card et on va utiliser un display grid */
+
+.section2 {
+   
+    height: 50vh;
+    margin-right: 2vh;
+    display: grid;
+    grid-template-rows: repeat(2,2fr);
+    grid-template-columns: repeat(2,2fr);
+    grid-template-areas: "card1 card2"
+                         "card3 card4";
+    gap: 10px;
+    
+    
+}
+
+.card1 {
+    grid-area: card1;
+    border: 1px solid black;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 1em;
+}
+
+/* Dans la card2 on va avoir 3 grid (card-card1, card-card2 et card-card-3) */
+.card2 {
+    grid-area: card2;
+    display: grid;
+    grid-template-areas:"card-card1 card-card1 card-card1"
+                        "card-card2 card-card3 card-card3";
+    gap: 3px;
+   
+}
+
+/* Dans la card-card1 on va créer 2 autres grid que l'on va nommer nested-grid */
+.card-card1{
+    grid-area: card-card1;
+    border: 1px dashed black;
+    display: grid;
+    grid-template-areas: "nested-card1 nested-card2";
+    margin-bottom: auto;
+    
+}
+
+.nested-card1 {
+    grid-area: nested-card1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+
+}
+
+.nested-card2 {
+    grid-area: nested-card2;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.card-card2 {
+    grid-area: card-card2;
+    border: 1px solid black;
+}
+
+/* Cette classe nous permet d'affecter des propriétés à MESSAGERIE */
+.aligne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cette classe nous permet d'affecter des propriétés à l'image notification */
+.notif {
+    width: 80px;
+    display: flex;
+    text-align: center;
+    margin: auto;  
+}
+
+/* Animation de l'image avec la notification qui se trouve dans la card-card2*/
+img:hover {
+    /* Commencer l'animation shake et la faire durer pendant 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* Lorsque l'animation se termine, recommencer */
+    animation-iteration-count: infinite;
+}
+
+/* Cette règle nous permet de créer un effet de secousse à notre image */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }  /* l'image va être légèrement déplacé de 1 pixel à droite et en bas, sans rotation */
+    10% { transform: translate(-1px, -2px) rotate(-1deg); } /* l'image va être déplacé de 1 pixel à gauche et de 2 pixels en haut, avec une rotation de -1 degré */
+    20% { transform: translate(-3px, 0px) rotate(1deg); } /* l'image va être déplacé de 3 pixels à gauche, sans déplacement vertical, avec une rotation de 1 degré */
+    30% { transform: translate(3px, 2px) rotate(0deg); } /* l'image va être déplacé de 3 pixels à droite et de 2 pixels en bas, sans rotation */
+  }
+
+/* Cette classe nous permet d'affecter des propriétés au message qui se trouve dans la card-card2 */
+.message {
+    display: block;
+    text-align: center;
+}
+
+
+.card-card3 {
+    grid-area: card-card3;
+    border: 1px solid black;
+}
+
+
+
+.card3 {
+    grid-area: card3;
+    border: 1px solid black;
+}
+
+/* Cette classe nous permet d'affecter des propriétés au paragraphe qui se trouve dans la card-card3 */
+.pro {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Style du tableau */
+table {
+    
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40vw;
+    margin: 20px;
+    text-align: center;
+}
+
+/* On va applique cette couleur de fond au première colonne de notre tableau */
+th {
+    background-color: lightgray; 
+}
+
+/* Cette pseudo-class va permettre d'appliquer cette couleur au lignes paires du tableau et de cibler les enfants de l'élement parent */
+tr:nth-child(even) {
+    background-color: rgb(231, 231, 231);
+}
+
+.card4 {
+    grid-area: card4;
+    border: 1px solid black;
+}
+/* Cette propriété nous permet de ne pas faire apparaitre les puces de nos listes non-ordonnée */
+ul {
+    list-style-type: none;
+}
+
+/* Style qui me permet d'affecter la couleur noire au lien */
+a {
+   color: black; 
+}
+
+
